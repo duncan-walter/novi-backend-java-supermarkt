@@ -16,7 +16,7 @@ public class SuperMarket {
     // Na wat zoeken kwam ik er achter dat je de placeholders zo kan definiëren dat dezelfde waarde op verschillende
     // placeholders neergezet kan worden me de juiste syntax. In mijn implementatie krijgen beide %2$s definities dezelfde waarde.
     // De "s" (string), "d" (decimal integer) of "f" (float) duiden het type van de waarde in de placeholder aan.
-    public void buyItem(Product product, short amount) {
+    private void buyItem(Product product, short amount) {
         if (amount <= product.amount) {
             float totalPrice = amount * product.price;
             System.out.printf("You bought %d %s(s) for %f euro%n", amount, product.name, totalPrice);
@@ -24,5 +24,21 @@ public class SuperMarket {
         } else {
             System.out.printf("You cannot buy %1$d %2$s(s), we only have %3$d %2$s(s) in stock%n", amount, product.name, product.amount);
         }
+    }
+
+    public void buyBread(short amount) {
+        buyItem(bread, amount);
+    }
+
+    public void buyFruit(short amount) {
+        buyItem(fruit, amount);
+    }
+
+    public void buyToiletPaper(short amount) {
+        buyItem(toiletPaper, amount);
+    }
+
+    public void buyCheese(short amount) {
+        buyItem(cheese, amount);
     }
 }
