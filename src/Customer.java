@@ -11,13 +11,13 @@ public class Customer {
     }
 
     public void buyItem(String productName, short amount) {
-        if (superMarket.bread.name == productName) {
+        if (superMarket.bread.name.equals(productName)) {
             superMarket.buyBread(amount);
-        } else if (superMarket.fruit.name == productName) {
+        } else if (superMarket.fruit.name.equals(productName)) {
             superMarket.buyFruit(amount);
-        } else if (superMarket.toiletPaper.name == productName) {
+        } else if (superMarket.toiletPaper.name.equals(productName)) {
             superMarket.buyToiletPaper(amount);
-        } else if (superMarket.cheese.name == productName) {
+        } else if (superMarket.cheese.name.equals(productName)) {
             superMarket.buyCheese(amount);
         } else {
             System.out.printf("%s does not exist in this super market.", productName);
