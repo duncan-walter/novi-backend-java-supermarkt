@@ -5,10 +5,10 @@ public class SuperMarket {
     public Product cheese;
 
     public SuperMarket(Product bread, Product fruit, Product toiletPaper, Product cheese) {
-        this.bread = bread;
-        this.fruit = fruit;
-        this.toiletPaper = toiletPaper;
-        this.cheese = cheese;
+        this.bread = bread == null ? getFakeProduct() : bread;
+        this.fruit = fruit == null ? getFakeProduct() : fruit;
+        this.toiletPaper = toiletPaper == null ? getFakeProduct() : toiletPaper;
+        this.cheese = cheese == null ? getFakeProduct() : cheese;
     }
 
     // In deze methode maak ik gebruik van de printf methode. Dit zorgt ervoor dat ik niet de plus notatie hoef te gebruiken.
@@ -40,5 +40,9 @@ public class SuperMarket {
 
     public void buyCheese(int amount) {
         buyItem(cheese, amount);
+    }
+
+    private Product getFakeProduct() {
+        return new Product("Fake", 0, 0);
     }
 }
