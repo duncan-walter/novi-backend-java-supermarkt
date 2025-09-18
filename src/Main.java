@@ -3,10 +3,10 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
         SuperMarket albertHeijn = new SuperMarket(
-                new Product("Frikandelbroodje", 0.99f, (short) 10),
-                new Product("Kiwi", 2f, (short) 50),
-                new Product("0,5-laags toiletpapier", 5f, (short) 100),
-                new Product("Cheddar", 2.5f, (short) 10)
+                new Product("Frikandelbroodje", 0.99f, 10),
+                new Product("Kiwi", 2f, 50),
+                new Product("0,5-laags toiletpapier", 5f, 100),
+                new Product("Cheddar", 2.5f, 10)
         );
         Customer customer = new Customer("Duncan");
         Scanner scanner = new Scanner(System.in);

@@ -10,7 +10,7 @@ public class Customer {
         this.superMarket = superMarket;
     }
 
-    public void buyItem(String productName, short amount) {
+    public void buyItem(String productName, int amount) {
         if (superMarket.bread.name.equals(productName)) {
             superMarket.buyBread(amount);
         } else if (superMarket.fruit.name.equals(productName)) {
